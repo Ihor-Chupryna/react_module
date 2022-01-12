@@ -8,7 +8,7 @@ const SpaceFlights = () => {
         fetch('https://api.spacexdata.com/v3/launches/')
             .then((response) => response.json())
             .then((values) => setSpaceFlights(values.filter(value => value.launch_year !== '2020')));
-    }, [])
+    }, []);
 
     return (
         <div>
