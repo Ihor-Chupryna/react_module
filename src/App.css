@@ -1,0 +1,8 @@
+.style {
+    display: flex;
+}
+
+.style div {
+    border: 1px solid black;
+    padding-left: 5px;
+}
