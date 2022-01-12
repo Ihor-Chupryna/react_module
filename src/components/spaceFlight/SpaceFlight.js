@@ -7,7 +7,7 @@ const SpaceFlight = ({flight}) => {
                 <h2>{flight.mission_name}</h2>
                 <p>{flight.launch_year}</p>
             </div>
-            <img src={flight.links.mission_patch_small} alt="ship"/>
+            <img src={flight.links.mission_patch_small} alt="logo"/>
         </div>
     );
 };
