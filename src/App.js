@@ -1,9 +1,10 @@
 import './App.css';
+import Spaceships from "./components/spaceships/Spaceships";
 
 function App() {
   return (
     <div>
-      <h1>test</h1>
+      <Spaceships/>
     </div>
   );
 }
