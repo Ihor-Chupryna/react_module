@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+
+.wrapper div {
+    margin: auto 0;
+}
+

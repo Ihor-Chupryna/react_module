@@ -1,12 +1,12 @@
 import './App.css';
-import Spaceships from "./components/spaceships/Spaceships";
+import SpaceFlights from "./components/spaceFlights/SpaceFlights";
 
 function App() {
-  return (
-    <div>
-      <Spaceships/>
-    </div>
-  );
+    return (
+        <div>
+            <SpaceFlights/>
+        </div>
+    );
 }
 
 export default App;
