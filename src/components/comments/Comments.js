@@ -12,7 +12,7 @@ const Comments = () => {
 
     return (
         <div>
-            {comments.map(value => <Comment comment={value}/>)}
+            {comments.map(value => <Comment comment={value} key={value.id}/>)}
         </div>
     );
 };
