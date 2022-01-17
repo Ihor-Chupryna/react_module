@@ -2,4 +2,4 @@ const baseUrl = 'https://jsonplaceholder.typicode.com';
 
 export default baseUrl
 
-export const userUrl = '/users'
+export const usersUrl = '/users'
