@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const Form = ({getFilter}) => {
-    const [form, setForm] = useState({name:'', username: '', email: ''});
+    const [form, setForm] = useState({name: '', username: '', email: ''});
 
     const formHandler = (ev) => {
         const evData = {...form, [ev.target.name]: ev.target.value}
@@ -9,7 +9,7 @@ const Form = ({getFilter}) => {
     }
 
     const onSubmit = (ev) => {
-      ev.preventDefault()
+        ev.preventDefault()
         getFilter(form)
     }
 
