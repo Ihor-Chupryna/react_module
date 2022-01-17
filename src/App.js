@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 import Form from "./components/form/Form";
-import Users from "./components/user/Users";
+import Users from "./components/users/Users";
 import {getUsers} from "./services/userService";
 
 
@@ -22,9 +22,11 @@ function App() {
 
         if (data.name) {
             filterArr = filterArr.filter(user => user.name.toLowerCase().includes(data.name.toLowerCase()))
-        } else if (data.username) {
+        }
+        if (data.username) {
             filterArr = filterArr.filter(user => user.username.toLowerCase().includes(data.username.toLowerCase()))
-        } else if (data.email) {
+        }
+        if (data.email) {
             filterArr = filterArr.filter(user => user.email.toLowerCase().includes(data.email.toLowerCase()))
         }
         setFilteredUsers(filterArr)
