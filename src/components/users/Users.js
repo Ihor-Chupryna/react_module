@@ -1,4 +1,4 @@
-import User from "../users/User";
+import User from "../user/User";
 
 const Users = ({filteredUsers}) => {
 

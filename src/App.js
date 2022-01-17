@@ -1,6 +1,6 @@
 
 
-import Users from "./components/user/Users";
+import Users from "./components/users/Users";
 
 
 
@@ -10,8 +10,11 @@ function App() {
 
   return (
     <div>
+        <div>
+            <Users/>
 
-           <Users/>
+        </div>
+
     </div>
   );
 }
