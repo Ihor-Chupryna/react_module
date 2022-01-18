@@ -1,10 +1,18 @@
-import User from "../user/User";
+import {useEffect, useState} from "react";
 
-const Users = ({filteredUsers}) => {
+import User from "../user/User";
+import {getUsers} from "../../services/userService";
+
+const Users = ({getUser}) => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+      getUsers().then(value => setUsers(value))
+  }, [])
 
     return (
         <div>
-            {filteredUsers.map(user => <User key={user.id} user={user}/>)}
+            {users.map(user => <User key={user.id} user={user} getUser={getUser}/>)}
         </div>
     );
 };
