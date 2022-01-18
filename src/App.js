@@ -18,7 +18,6 @@ setUser(user)
 
 const getUserId = (id) => {
     setUserId(id)
-    console.log(id)
 }
 
   return (
