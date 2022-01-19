@@ -4,7 +4,7 @@ import {getPost} from "../../services/postService";
 import Post from "../post/Post";
 
 const Posts = ({userId}) => {
-const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
     useEffect(() => {
         getPost(userId).then(value => setPosts(value))
     }, [userId])

@@ -4,11 +4,11 @@ import User from "../user/User";
 import {getUsers} from "../../services/userService";
 
 const Users = ({getUser}) => {
-  const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-      getUsers().then(value => setUsers(value))
-  }, [])
+    useEffect(() => {
+        getUsers().then(value => setUsers(value))
+    }, [])
 
     return (
         <div>

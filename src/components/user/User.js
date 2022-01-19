@@ -5,10 +5,10 @@ const User = ({user, getUser}) => {
 
     return (
         <div>
-           <div className={style.wrapper}>
-               <h3>{id}. {name}</h3>
-               <button onClick={()=>getUser(user)}>user details</button>
-        </div>
+            <div className={style.wrapper}>
+                <h3>{id}. {name}</h3>
+                <button onClick={() => getUser(user)}>user details</button>
+            </div>
         </div>
     );
 };
