@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 
 import {postService} from "../../services/postService";
 
-
 const UserPostPage = () => {
     const {state: {id}} = useLocation();
     const [postsUser, setPostUser] = useState([]);
