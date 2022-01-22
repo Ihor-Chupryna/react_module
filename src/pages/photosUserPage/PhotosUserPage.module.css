@@ -1,0 +1,6 @@
+.wrapper {
+    height: 400px;
+    padding: 5px;
+    overflow: hidden;
+    overflow-y: auto;
+}

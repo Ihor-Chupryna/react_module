@@ -1,0 +1,14 @@
+.userWrapper {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid darkgray;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.userWrapper button {
+    width: 70px;
+    height: 25px;
+    margin-top: 30%;
+}
+
