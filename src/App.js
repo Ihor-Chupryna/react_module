@@ -16,13 +16,12 @@ function App() {
         <>
             <Routes>
                 <Route path={'/'} element={<Main/>}>
-
                     <Route index element={<HomePage/>}/>
+
                     <Route path={'users'} element={<UsersPage/>}>
                         <Route path={':userId'} element={<UserDetailsPage/>}>
                             <Route path={'postsUser'} element={<UserPostPage/>}/>
                         </Route>
-
                         <Route path={':id/albums'} element={<UserAlbumsPage/>}>
                             <Route path={':albumId/photos'} element={<PhotosUserPage/>}/>
                         </Route>
