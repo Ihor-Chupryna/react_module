@@ -1,3 +1,6 @@
+import {Routes, Route} from 'react-router-dom'
+
+import {Main} from "./components";
 import {
     CommentsPage,
     HomePage,
@@ -8,8 +11,6 @@ import {
     UserPostPage,
     UsersPage
 } from "./pages";
-import {Routes, Route} from 'react-router-dom'
-import {Main} from "./components";
 
 function App() {
     return (
