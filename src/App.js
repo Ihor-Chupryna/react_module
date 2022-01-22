@@ -11,7 +11,6 @@ import {
 import {Routes, Route} from 'react-router-dom'
 import {Main} from "./components";
 
-
 function App() {
     return (
         <>
