@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 40px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 15px;
+    height: 750px;
+}
+
+.list {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
