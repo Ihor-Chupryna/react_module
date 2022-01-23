@@ -5,6 +5,9 @@ import style from './Header.module.css'
 const Header = () => {
     return (
         <div className={style.wrapper}>
+            <Link to='/'>
+                <button>HOME</button>
+            </Link>
             <Link to='/users'>
                 <button>USERS</button>
             </Link>
