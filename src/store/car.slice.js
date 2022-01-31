@@ -1,25 +1,77 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 
+import {carService} from "../components/services";
 
-
-const carSlice = createSlice({
-        name: 'carSlice',
-        initialState: {
-            cars: []
-        },
-        reducers: {
-            addCar: (state, actions) => {
-                state.cars.push({
-                    id:new Date().getTime(),
-                    ...actions.payload.data
-                })
-            },
-            deleteCar: (state, actions) => {
-                state.cars = state.cars.filter(car => car.id !== actions.payload.id)
-            }
+export const getAllCars = createAsyncThunk(
+    'carSlice/getAllCars',
+    async (_, {rejectWithValue}) => {
+        try {
+            const cars = await carService.getAll();
+            return cars
+        } catch (e) {
+            return rejectWithValue(e.message)
         }
     }
 )
+
+export const createCar = createAsyncThunk(
+    'carSlice/createCar',
+    async ({data}, {dispatch} )=> {
+        try {
+            const newCar = await carService.create(data);
+            dispatch(addCar({data: newCar}))
+        } catch (e) {
+            console.log(e)
+        }
+    }
+)
+
+export const deleteCarThunk = createAsyncThunk(
+    'carSlice/deleteCar',
+    async ({id}, {dispatch}) => {
+        try {
+            await carService.deleteById(id)
+            dispatch(deleteCar({id}))
+        } catch (e) {
+            console.log(e)
+        }
+    }
+)
+
+const carSlice = createSlice({
+    name: 'carSlice',
+    initialState: {
+        cars: [],
+        status: null,
+        error: null
+    },
+    reducers: {
+        addCar: (state, actions) => {
+            console.log(actions.payload.data)
+            state.cars.push(actions.payload.data)
+
+        },
+        deleteCar: (state, actions) => {
+            state.cars = state.cars.filter(car => car.id !== actions.payload.id)
+        }
+    },
+    extraReducers: {
+        [getAllCars.pending]: (state, action) => {
+            state.status = 'pending'
+            state.error = null
+        },
+        [getAllCars.fulfilled]: (state, action) => {
+            state.status = 'fulfilled'
+            state.cars = action.payload
+
+        },
+        [getAllCars.rejected]: (state, action) => {
+            state.status = 'rejected'
+            state.error = action.payload
+
+        }
+    }
+})
 
 const carReducer = carSlice.reducer;
 
