@@ -1,11 +1,15 @@
 import './App.css';
 
-function App() {
-  return (
-    <div>
+import {Cars, Form} from "./components";
 
-    </div>
-  );
+
+function App() {
+    return (
+        <>
+            <Form/>
+            <Cars/>
+        </>
+    );
 }
 
 export default App;
