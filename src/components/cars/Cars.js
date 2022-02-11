@@ -1,8 +1,9 @@
-import {Car} from "../car/Car";
 import {useSelector} from "react-redux";
 
+import {Car} from "../car/Car";
+
 const Cars = () => {
-   const {cars} = useSelector(state => state['carReducer'])
+    const {cars} = useSelector(state => state['carReducer'])
     console.log(cars)
     return (
         <div>

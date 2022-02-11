@@ -11,7 +11,7 @@ const carSlice = createSlice({
             addCar: (state, actions) => {
                 state.cars.push({
                     id:new Date().getTime(),
-                    ...actions.payload.data
+                    ...actions.payload.data,
                 })
             },
             deleteCar: (state, actions) => {
