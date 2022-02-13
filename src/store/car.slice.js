@@ -16,7 +16,7 @@ export const getAllCars = createAsyncThunk(
 
 export const createCar = createAsyncThunk(
     'carSlice/createCar',
-    async ({data}, {dispatch} )=> {
+    async ({data}, {dispatch}) => {
         try {
             const newCar = await carService.create(data);
             dispatch(addCar({data: newCar}))
@@ -56,7 +56,7 @@ const carSlice = createSlice({
         }
     },
     extraReducers: {
-        [getAllCars.pending]: (state, action) => {
+        [getAllCars.pending]: (state) => {
             state.status = 'pending'
             state.error = null
         },
